@@ -12,12 +12,16 @@ def multiplication(x,y):
     return x
 
 def power(x,y):
-    result = x
-    while y > 1:
-        result = multiplication(result, x)
-        y -= 1
-
-    return result
+    if y == 0:
+        return 1
+    
+    else:
+        result = x
+        while y > 1:
+            result = multiplication(result, x)
+            y -= 1
+            
+        return result
 
 #Testing
 a = power(6, 9)
